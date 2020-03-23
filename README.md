@@ -1,5 +1,5 @@
 # FERPlus-Emotion-Recognition-using-keras
-This is a repository about using keras to do emotion recognition on FER_Plus dataset
+This is a repository about using keras to do emotion recognition on FERPlus dataset
 
 ## FERPlus dataset
 The [FERPlus (FER+)](https://github.com/microsoft/FERPlus) annotations provide a set of new labels for the standard Emotion [FER dataset](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data), which is thought to be more accuract than the original FER2013 annotations.
