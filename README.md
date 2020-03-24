@@ -9,3 +9,13 @@ The new label file is named [fer2013new.csv]((https://github.com/microsoft/FERPl
 ## The main purpose
 
 The main purpose of this repository is to replicate the pretrained CNN models' performances in this [blog](http://www.robots.ox.ac.uk/~albanie/pytorch-models.html), which has the model weights in Pytorch and MatConvNet, but not in tensorflow or keras.
+
+## Requirements
+
+* Tensorflow 1.14.0 or higher
+* keras 2.2.4 or higher
+* [keras_contrib](https://github.com/keras-team/keras-contrib)
+* [keras_vggface](https://github.com/rcmalli/keras-vggface)
+* [albumentations](https://github.com/albumentations-team/albumentations)
+
+## Training
