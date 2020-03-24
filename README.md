@@ -29,3 +29,11 @@ To train the ResNet50 model:
 
 Notes: `--freeze_before -51` means to freeze the parameters before the -51 th layer (check the [model_layers.txt](https://github.com/wtomin/FERPlus-Emotion-Recognition-using-keras/blob/master/model_layers.txt)), which turns out to be the best choice.
 
+## Model Accuracy
+
+| Model      | Pretrained  | Training | FERplus Val |FERplus Test |
+| ----------- | ----------- | ----------| ----------| -----------|
+| [ResNet50](https://hkustconnect-my.sharepoint.com/:u:/g/personal/ddeng_connect_ust_hk/EaAR4m7BIeREoGsgs-fW-wsBnt1LN4m1WyAclqJi1knCJQ?e=ywlKdm)      | VGGFace2    | FERPlus | 88.0 | 86.5 |
+
+- [x] ResNet50
+- [ ] SeNet50
