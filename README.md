@@ -37,3 +37,6 @@ Notes: `--freeze_before -51` means to freeze the parameters before the -51 th la
 
 - [x] ResNet50
 - [ ] SeNet50
+
+To evaluate the model performance on the validation set and the test set, use
+`python test.py  --checkpoint_path path-to-the-checkpoint --model_name ResNet50 --dataset_name FERPlus --name experiment-directory  --batch_size 64`
