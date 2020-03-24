@@ -19,3 +19,7 @@ The main purpose of this repository is to replicate the pretrained CNN models' p
 * [albumentations](https://github.com/albumentations-team/albumentations)
 
 ## Training
+
+The training dataset is FERPlus. Data augmentations, such as random cropping and horizontal flipping are applied. The class weights are set to [2.74398525, 3.56296941, 7.9199129, 8.44722581, 12.27334083, 215.34868421, 50.51388889, 230.51408451] to match their distribution.
+
+<img src="https://github.com/wtomin/FERPlus-Emotion-Recognition-using-keras/blob/master/FERPlus_dis.png" width="800">
