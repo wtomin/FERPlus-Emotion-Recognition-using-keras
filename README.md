@@ -27,7 +27,7 @@ The training dataset is FERPlus. Data augmentations, such as random cropping and
 To train the ResNet50 model:
 `python train.py --init_lr 0.001 --lr_policy plateau --model_name ResNet50 --dataset_name FERPlus --name Experiment --freeze_before -51 --batch_size 64`
 
-Notes: `--freeze_before -51` means to freeze the parameters before the -51 th layer (check the [resnet50_layers.txt](https://github.com/wtomin/FERPlus-Emotion-Recognition-using-keras/blob/master/model_layers.txt)), which turns out to be the best choice.
+Notes: `--freeze_before -51` means to freeze the parameters before the -51 th layer (check the [resnet50_layers.txt](https://github.com/wtomin/FERPlus-Emotion-Recognition-using-keras/blob/master/resnet50_layers.txt), which turns out to be the best choice.
 
 ## Model Accuracy
 
