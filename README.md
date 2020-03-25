@@ -20,7 +20,7 @@ The main purpose of this repository is to replicate the pretrained CNN models' p
 
 ## Training
 
-The training dataset is FERPlus. Data augmentations, such as random cropping and horizontal flipping are applied. The class weights are set to [2.74398525, 3.56296941, 7.9199129, 8.44722581, 12.27334083, 215.34868421, 50.51388889, 230.51408451] to match their distribution.
+The training dataset is FERPlus. Data augmentations, such as random cropping and horizontal flipping are applied. The class weights are set to [2.74398525, 3.56296941, 7.9199129, 8.44722581, 12.27334083, 215.34868421, 50.51388889, 230.51408451] to match their distribution. Dropout is applied on the last dense layer (dropout ratio=0.3). Regularization is not applied.
 
 <img src="https://github.com/wtomin/FERPlus-Emotion-Recognition-using-keras/blob/master/FERPlus_dis.png" width="800">
 
