@@ -29,14 +29,23 @@ To train the ResNet50 model:
 
 Notes: `--freeze_before -51` means to freeze the parameters before the -51 th layer (check the [resnet50_layers.txt](https://github.com/wtomin/FERPlus-Emotion-Recognition-using-keras/blob/master/resnet50_layers.txt), which turns out to be the best choice.
 
+To train the SeNet50 model:
+
+`python train.py --init_lr 0.001 --lr_policy plateau --model_name SeNet50 --dataset_name FERPlus --name Experiment --freeze_before -39 --batch_size 64`
+
+Notes: `--freeze_before -39` means to freeze the parameters before the -39 th layer (check the [senet50_layers.txt](https://github.com/wtomin/FERPlus-Emotion-Recognition-using-keras/blob/master/senet50_layers.txt), which turns out to be the best choice.
+
 ## Model Accuracy
 
 | Model      | Pretrained  | Training | FERplus Val |FERplus Test |
 | ----------- | ----------- | ----------| ----------| -----------|
 | [ResNet50](https://hkustconnect-my.sharepoint.com/:u:/g/personal/ddeng_connect_ust_hk/EaAR4m7BIeREoGsgs-fW-wsBnt1LN4m1WyAclqJi1knCJQ?e=ywlKdm)      | VGGFace2    | FERPlus | 88.0 | 86.5 |
+| [SeNet50](https://hkustconnect-my.sharepoint.com/:u:/g/personal/ddeng_connect_ust_hk/EUoDJQJ1QVNAq1cHEOec1QcB8XGxot_iMtnIgHB0t-CgHw?e=40raBe) | VGGFace2 | FERPlus | 87.3 | 85.8 |
 
 - [x] ResNet50
-- [ ] SeNet50
+- [x] SeNet50
+- [ ] Improve the performance
+
 
 To evaluate the model performance on the validation set and the test set, use
-`python test.py  --checkpoint_path path-to-the-checkpoint --model_name ResNet50 --dataset_name FERPlus --name experiment-directory  --batch_size 64`
+`python test.py  --checkpoint_path path-to-the-checkpoint --model_name Model-Name --dataset_name FERPlus --name experiment-directory  --batch_size 64`
