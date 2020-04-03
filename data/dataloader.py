@@ -4,21 +4,19 @@ import numpy as np
 from .dataset import Dataset
 
 def default_collate_fn(samples):
-    # support two sample type: list of np.ndarray, dictionary
+    # support two sample type: list of np.ndarray
     n_samples = len(samples)
     assert n_samples>0, 'batch size should larger than 0'
     sample_type = type(samples[0])
     if sample_type == list or sample_type == tuple:
         outputs = []
         for item_id in range(len(samples[0])):
-            outputs.append(np.array([samples[sample_id][item_id] for sample_id in range(n_samples)]))
-    # elif sample_type == dict:
-    #     outputs = {}
-    #     for item_key in samples[0].keys():
-    #         outputs[item_key] = np.array([samples[sample_id][item_key] for sample_id in range(n_samples)])
+            outputs.append(default_collate_fn([samples[sample_id][item_id] for sample_id in range(n_samples)]))
+    elif sample_type == np.ndarray:
+        outputs = np.array(samples)
     else:
         raise ValueError("current collate_fn only supports dict and np.ndarray!")
-    return tuple(outputs)
+    return outputs
 
 def default_sampler(dataset):
     return np.arange(0, len(dataset))
@@ -81,7 +79,7 @@ class DataLoader(Sequence):
                 for sample in executor.map(lambda i: self.dataset[i], indices):
                     samples.append(sample)
         batchdata = self.collate_fn(samples)
-        return batchdata
+        return batchdata[0],batchdata[1]
 
     def on_epoch_end(self):
         n = len(self.dataset)
